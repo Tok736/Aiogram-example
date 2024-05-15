@@ -11,7 +11,6 @@ from aiogram.types import (
 from aiogram.filters.command import Command
 from aiogram.utils.keyboard import (
     ReplyKeyboardBuilder,
-    InlineKeyboardBuilder,
 )
 
 from command_list import CommandList
@@ -23,7 +22,6 @@ command_list = CommandList(
         "/dish",
         "/reply_builder",
         "/special_buttons",
-        "/inline_url",
     ]
 )
 
@@ -142,6 +140,3 @@ async def on_chat_shared(message: Message):
         f"User ID: {message.chat_shared.chat_id}"
     )
 
-# # 759068821 id ксеши
-
-# @router.message(Command("inline_url"))

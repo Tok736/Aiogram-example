@@ -9,6 +9,7 @@ from message_work.router   import command_list as message_command_list
 from state_machine.router  import command_list as state_command_list
 from common.router         import command_list as common_command_list
 from buttons.router        import command_list as buttons_command_list
+from inline_buttons.router import command_list as inline_buttons_command_list
 
 router = Router(
     name="Роутер для команды /help"
@@ -22,6 +23,7 @@ async def command_help(message: Message):
         state_command_list,
         common_command_list,
         buttons_command_list,
+        inline_buttons_command_list,
     ]
 
     content = as_list(
